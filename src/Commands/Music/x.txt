@@ -1,0 +1,19 @@
+const Command = require('../../Structures/Command');
+const MusicClient = require("discord-music-core")
+const musicPlayer = new MusicClient("Youtube Api key")
+module.exports = class extends Command {
+
+    constructor(...args) {
+        super(...args, {
+            aliases: ['p'],
+            description: 'Play music!',
+            category: 'Music'
+        });
+    }
+
+    async run(message) {
+        if (!args[0]) return message.reply('No song specified.')
+        musicPlayer.play(message, searchArray)
+    }
+
+};
