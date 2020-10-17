@@ -11,7 +11,9 @@ module.exports = class extends Event {
 		console.log([
 			`Logged in as ${this.client.user.tag}`,
 			`Loaded ${this.client.commands.size} commands!`,
-			`Loaded ${this.client.events.size} events!`
+			`Loaded ${this.client.events.size} events!`,
+			`Joined ${this.client.guilds.cache.size} servers!`,
+			`Serving ${this.client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)} people!`,
 		].join('\n'));
 
 		const activities = [
