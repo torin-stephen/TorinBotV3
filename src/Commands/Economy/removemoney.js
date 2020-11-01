@@ -14,7 +14,7 @@ module.exports = class extends Command {
     };
 
     async run(message, args) {
-        if (!message.author.id == '472417108148617246') {
+        if (message.author.id !== '472417108148617246') {
             return message.reply('You do not have enough permission to use this command.');
         };
         

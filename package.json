@@ -12,6 +12,7 @@
     "discord-music-core": "^1.0.2",
     "discord.js": "^12.2.0",
     "erela.js": "^1.1.8",
+    "express": "^4.17.1",
     "figlet": "^1.5.0",
     "fs": "0.0.1-security",
     "got": "^11.5.2",
@@ -19,10 +20,13 @@
     "m3u8stream": "^0.7.1",
     "moment": "^2.27.0",
     "node-fetch": "^2.6.1",
+    "opusscript": "0.0.7",
     "parse-ms": "^2.1.0",
     "parse-time": "^0.1.4",
     "quick.db": "^7.1.1",
     "random-puppy": "^1.1.0",
-    "snekfetch": "^4.0.4"
+    "simple-youtube-api": "^5.2.1",
+    "snekfetch": "^4.0.4",
+    "ytdl-core": "^4.0.0"
   }
 }
