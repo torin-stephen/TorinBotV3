@@ -1,6 +1,7 @@
 const Event = require('../../Structures/Event');
 const GuildSchema = require('../../schemas/Guild-schema');
 const { globalprefix } = require('../../../config.json');
+const quickdb = require('quick.db');
 
 module.exports = class extends Event {
 
@@ -42,6 +43,13 @@ module.exports = class extends Event {
 		if (command) {
 			command.run(message, args);
 			console.log(`Command used: ${cmd}`)
+		}
+
+		let cmdx = quickdb.get(`cmd_${message.guild.id}`)
+
+		if(cmdx) {
+			let cmdy = cmdx.find(x => x.name === cmd)
+			if(cmdy) message.channel.send(cmdy.response)
 		}
 	}
 

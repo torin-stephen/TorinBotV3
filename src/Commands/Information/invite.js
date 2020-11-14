@@ -4,9 +4,11 @@ module.exports = class extends Command {
 
 	constructor(...args) {
 		super(...args, {
+			name: 'invite',
 			aliases: ['invitelink'],
 			description: 'Invite TorinBot to another server',
-			category: 'Information'
+			category: 'Information',
+			usage: '$invite'
 		});
 	}
 
@@ -14,7 +16,10 @@ module.exports = class extends Command {
         const Discord = require('discord.js');
         const embed = new Discord.MessageEmbed()
         .setTitle('Invite link')
-        .setURL('https://discord.com/api/oauth2/authorize?client_id=709337034204119101&permissions=8&scope=bot')
+		.setURL('https://torinbot.tk')
+		.setColor('PURPLE')
+		.setThumbnail('https://torinbot.tk/logo2.png')
+		.setDescription('Click the link above to invite **TorinBot** to another server.')
         message.channel.send(embed)
 	}
 

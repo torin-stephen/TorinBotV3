@@ -12,9 +12,11 @@ module.exports = class extends Command {
 
     constructor(...args) {
         super(...args, {
+            name: 'cat',
             aliases: ['cats'],
             description: 'Cat images',
-            category: 'Fun'
+            category: 'Fun',
+            usage: 'cat'
         });
     }
 

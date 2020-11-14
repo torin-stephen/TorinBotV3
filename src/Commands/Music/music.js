@@ -10,6 +10,7 @@ module.exports = class extends Command {
 
     constructor(...args) {
         super(...args, {
+            name: 'music',
             aliases: ['m'],
             description: 'Command handler for music commands. Check usage',
             category: 'Music',

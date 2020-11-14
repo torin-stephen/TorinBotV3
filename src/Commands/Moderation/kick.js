@@ -4,10 +4,11 @@ module.exports = class extends Command {
 
   constructor(...args) {
     super(...args, {
+      name: 'kick',
       aliases: ['kickmember'],
       description: 'Kicks mentioned member',
       category: 'Moderation',
-      usage: 'kick <@user> [reason]'
+      usage: '$kick <@user> [reason]'
     });
   }
 

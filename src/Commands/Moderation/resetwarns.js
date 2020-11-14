@@ -6,9 +6,11 @@ module.exports = class extends Command {
 
   constructor(...args) {
     super(...args, {
-      aliases: ['rmwarns'],
-      description: 'Removes warns from mentioned member',
-      category: 'Moderation'
+      name: 'resetwarns',
+			aliases: ['rmwarns', 'clearwarns'],
+			description: 'clear the warns of a member',
+			category: 'Moderation',
+			usage: '$resetwarns <member>'
     });
   }
 

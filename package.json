@@ -9,6 +9,7 @@
     "eslint-config-tesseract": "^0.0.2"
   },
   "dependencies": {
+    "dblapi.js": "^2.4.1",
     "discord-music-core": "^1.0.2",
     "discord.js": "^12.2.0",
     "erela.js": "^1.1.8",
@@ -16,6 +17,7 @@
     "figlet": "^1.5.0",
     "fs": "0.0.1-security",
     "got": "^11.5.2",
+    "hangcord": "0.0.5",
     "lavalink": "^2.10.0",
     "m3u8stream": "^0.7.1",
     "moment": "^2.27.0",

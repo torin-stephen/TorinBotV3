@@ -6,9 +6,11 @@ module.exports = class extends Command {
 
     constructor(...args) {
         super(...args, {
-            aliases: ['p'],
-            usage: "$prefix [newprefix]",
-            category: "Utilities"
+            name: 'prefix',
+			aliases: ['p'],
+			description: 'Change the bot prefix for this server',
+			category: 'Utilities',
+			usage: '$prefix <newprefix>'
         });
     }
 

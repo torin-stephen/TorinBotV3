@@ -4,9 +4,11 @@ module.exports = class extends Command {
 
     constructor(...args) {
         super(...args, {
+            name: 'meme',
             aliases: ['memes'],
             description: 'Meme from r/memes',
-            category: 'Fun'
+            category: 'Fun',
+            usage: '$meme'
         });
     }
 

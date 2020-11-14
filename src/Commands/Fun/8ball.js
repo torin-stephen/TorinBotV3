@@ -26,9 +26,11 @@ module.exports = class extends Command {
 
 	constructor(...args) {
 		super(...args, {
-			description: 'See your future!',
-            category: 'Fun',
-            usage: '8ball <question here>?'
+			name: '8ball',
+			aliases: ['predict'],
+			description: 'See your future',
+			category: 'Fun',
+			usage: '$8ball <question>?'
 		});
 	}
 

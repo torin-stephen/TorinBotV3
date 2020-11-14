@@ -36,9 +36,11 @@ module.exports = class extends Command {
 
 	constructor(...args) {
 		super(...args, {
+			name: 'serverinfo',
 			aliases: ['server', 'guild', 'guildinfo', 'si'],
 			description: 'Displays information about the server that said message was run in.',
-			category: 'Information'
+			category: 'Information',
+			usage: '$serverinfo'
 		});
 	}
 

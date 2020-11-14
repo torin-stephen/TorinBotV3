@@ -5,9 +5,11 @@ module.exports = class extends Command {
 
 	constructor(...args) {
 		super(...args, {
+			name: 'uptime',
 			aliases: ['ut'],
-			description: 'This provides the current uptime of the bot.',
-			category: 'Utilities'
+			description: 'Shows how long the bot has been online',
+			category: 'Utilities',
+			usage: '$uptime'
 		});
 	}
 

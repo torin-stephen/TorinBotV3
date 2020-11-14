@@ -4,6 +4,7 @@ module.exports = class extends Command {
 
   constructor(...args) {
     super(...args, {
+      name: 'ban',
       aliases: ['banmember'],
       description: 'Bans mentioned member',
       category: 'Moderation',

@@ -6,6 +6,7 @@ module.exports = class extends Command {
 
     constructor(...args) {
         super(...args, {
+            name: 'poll',
             aliases: ['runpoll', 'ask'],
             description: 'Creates a poll',
             category: 'Utilities',
@@ -26,8 +27,8 @@ module.exports = class extends Command {
             .setColor('DARK_GREEN')
             .setFooter(`Poll by ${message.author.tag}`)
         pollChannel.send(embedPoll).then(embedPoll => {
-            embedPoll.react('👍')
-            embedPoll.react('👎')
+            embedPoll.react('775081123284910090')
+            embedPoll.react('775081123003760710')
         });
     }
 

@@ -13,9 +13,11 @@ module.exports = class extends Command {
 
     constructor(...args) {
         super(...args, {
+            name: 'dog',
             aliases: ['dogs'],
             description: 'dog images',
-            category: 'Fun'
+            category: 'Fun',
+            usage: '$dog'
         });
     }
 

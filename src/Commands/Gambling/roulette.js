@@ -8,6 +8,7 @@ module.exports = class extends Command {
 
     constructor(...args) {
         super(...args, {
+            name: 'roulette',
             aliases: ['rl'],
             description: 'Play with the economy money',
             category: 'Gambling',

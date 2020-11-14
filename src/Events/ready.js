@@ -1,6 +1,9 @@
 const Event = require('../Structures/Event');
 const db = require('mongoose');
 const config = require("../../config.json")
+const DBL = require('dblapi.js');
+const dbl = new DBL(config.dbltoken, this.client);
+
 
 const dbOptions = {
 	useNewUrlParser: true,
@@ -35,6 +38,11 @@ module.exports = class extends Event {
 
 		let i = 0;
 		setInterval(() => this.client.user.setActivity(`${activities[i++ % activities.length]}`, { type: 'WATCHING' }), 20000)
+
+		setInterval(() => {
+			dbl.postStats(this.client.guilds.cache.size);
+			console.log('Posted stats to DBL')
+		}, 1800000);
 
 		await db.connect(`mongodb+srv://${config.dbusername}:${config.dbpassword}@cluster0.vny6q.mongodb.net/torinbot?retryWrites=true&w=majority`, dbOptions)
 			.then(console.log('MongoDB Active'))

@@ -4,7 +4,10 @@ module.exports = class extends Command {
 
 	constructor(...args) {
 		super(...args, {
-			aliases: ['hallo']
+			name: 'hello',
+			aliases: ['hallo'],
+			description: 'Simple test command to see if the bot is responding.',
+			usage: '$hello'
 		});
 	}
 
