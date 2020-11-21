@@ -8,7 +8,7 @@ module.exports = class extends Command {
     constructor(...args) {
         super(...args, {
             description: '1 in 10000 chance to kill someone and take all their money',
-            category: 'Economy',
+            category: 'Actions',
             usage: 'Usage: $kill @user'
         });
     }

@@ -7,15 +7,15 @@ module.exports = class extends Command {
   constructor(...args) {
     super(...args, {
       name: 'warn',
-			aliases: ['warnmember'],
-			description: 'warn a guild member',
-			category: 'Moderation',
-			usage: '$warn <member> <reason>'
+      aliases: ['warnmember'],
+      description: 'warn a guild member',
+      category: 'Moderation',
+      usage: '$warn <member> <reason>'
     });
   }
 
   async run(message, args) {
-    const logchannel = message.guild.channels.cache.find(channel => channel.name === "logs" || channel.name ===  "log")
+    const logchannel = message.guild.channels.cache.find(channel => channel.name === "log")
     if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("You need kick members permission to do this!");
     var user;
     user = message.mentions.members.first()
@@ -30,9 +30,7 @@ module.exports = class extends Command {
       .setFooter("Warned by " + message.author.tag)
       .setTimestamp()
     message.channel.send(embed)
-    if (logchannel) {
-      logchannel.send(embed)
-    } 
+
   }
 
 };

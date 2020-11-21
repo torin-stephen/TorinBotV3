@@ -15,7 +15,7 @@ module.exports = class extends Event {
 
 	async run(vote) {
 		console.log('User with ID ' + vote.user + ' voted!');
-		const user = client.users.get(vote.user); // This will get the User Object from the Client#users Collection
+		const user = this.client.users.get(vote.user); // This will get the User Object from the Client#users Collection
 		if (user) { // This checks if the Bot knows who the User is.
 			user.send('Thank you for voting!'); // DM the User "Thank you for voting!"
 		}

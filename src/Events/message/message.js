@@ -28,7 +28,7 @@ module.exports = class extends Event {
 		if (!message.guild || message.author.bot) return;
 
 		
-		const prefix = dbresult.prefix
+		const prefix = await dbresult.prefix
 
 		if (message.content.match(mentionRegex)) message.channel.send(`My prefix for ${message.guild.name} is \`${prefix}\`.`);
 
