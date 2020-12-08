@@ -29,6 +29,7 @@ module.exports = class extends Command {
         })
             .then(res => res.json())
             .then(json => message.channel.send(`Your short url is <${json.shortUrl}>`));
+            // Only for dev use
     }
 
 };
