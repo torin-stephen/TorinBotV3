@@ -1,1 +1,1 @@
-start /b node .
+node .
